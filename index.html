@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles/gameStyles.css">
+		<link rel="stylesheet" type="text/css" href="styles/engineStyles.css">
+		<title>Engine Template</title>
+	</head>
+	<body>
+		<div class="background-image"></div>
+		<div class="active screen" id="homeScreen">
+			<div class="menu">
+				<div id="title">Asteroidz</div>
+				<button type="button" id="homeToEnterNameButton">Join Game</button>
+				<button type="button" id="homeToControlsButton">Controls</button>
+				<button type="button" id="homeToHighScoresButton">High Scores</button>
+				<button type="button" id="homeToCreditsButton">Credits</button>
+			</div>
+		</div>
+		<div class="screen" id="enterNameScreen">
+			<div class="menu">
+				<div>Enter your nickname:</div>
+				<input type="text" id="nameField"/>
+				<button type="button" id="enterNameToGameButton">Join</button>
+				<button type="button" id="enterNameToHomeButton">Back</button>
+			</div>
+		</div>
+		<div class="screen" id="gameScreen">
+			<div class="menu">
+				<canvas id="canvas" height=512 width=512></canvas>
+				<button type="button" id="gameToHomeButton">Leave</button>
+			</div>
+		</div>
+		<div class="screen" id="controlsScreen">
+			<div class="menu">
+				<div class="subtitle">Controls</div>
+				<div class="controlChanger">
+					<div>Thrust</div>
+					<button type="button" id="changeThrustButton">Back</button>
+				</div>
+				<div class="controlChanger">
+					<div>Rotate Left</div>
+					<button type="button" id="changeRotateLeftButton">Back</button>
+				</div>
+				<div class="controlChanger">
+					<div>Rotate Right</div>
+					<button type="button" id="changeRotateRightButton">Back</button>
+				</div>
+				<div class="controlChanger">
+					<div>Shoot</div>
+					<button type="button" id="changeShootButton">Back</button>
+				</div>
+				<button type="button" id="controlsToHomeButton">Back</button>
+			</div>
+		</div>
+		<div class="screen" id="highScoresScreen">
+			<div class="menu">
+				<div class="subtitle">High Scores</div>
+				<table id="highScoresTable"></table>
+				<button type="button" id="highScoresToHomeButton">Back</button>
+			</div>
+		</div>
+		<div class="screen" id="creditsScreen">
+			<div class="menu">
+				<div class="subtitle">Credits</div>
+				<div>Created by Garrett Johnson for CS 5410.</div>
+				<button type="button" id="creditsToHomeButton">Back</button>
+			</div>
+		</div>
+		<button type="button" id="toggleMuteButton"></button>
+
+	    <script src = "node_modules/socket.io-client/dist/socket.io.slim.js"></script>
+
+		<script data-main="scripts/client/loader" src="scripts/client/require.js"></script>
+	</body>
+</html>
